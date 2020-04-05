@@ -2,6 +2,17 @@ import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import time
 
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+import keras
+from sklearn.model_selection import train_test_split
+from keras.models import Sequential
+from keras.layers import Dense
+from keras import optimizers
+import warnings
+from sklearn.metrics import accuracy_score
+
 df=pd.read_csv('heart.csv')
 
 chest_pain=pd.get_dummies(df['cp'],prefix='cp',drop_first=True)
@@ -17,23 +28,12 @@ df.drop(['slope','thal','restecg'],axis=1,inplace=True)
 X = df.drop(['target'], axis = 1)
 y = df.target.values
 
-from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
-
-from keras.models import Sequential
-from keras.layers import Conv2D, MaxPooling2D
-from keras.layers import Activation, Dropout, Flatten, Dense
-import keras
-from keras.models import Sequential
-from keras.layers import Dense
-from keras import optimizers
-import warnings
-from sklearn.metrics import accuracy_score
 
 conclusion = []
 
