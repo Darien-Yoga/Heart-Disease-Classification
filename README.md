@@ -29,8 +29,11 @@ And the features from this dataset is
 Artificial Neural Network
 
 Artificial Neural Network - an imitation to the human brain to learn based on the environment and analyzing incomplete information. Each circle in the input layer is an input to a “neuron”, each circle in the hidden layers. Each node from each circle has its own weight. The product of an input and a weight is the strength of the signal. A neuron is activated by a sum product of its input which would be mapped to an Activation Function, which used a sigmoid function. 
-![](images/ANN)
-![](images/sigmoid)
+
+![](images/ANN.JPG)
+
+![](images/sigmoid.png)
+
 The processing ability is stored in inter-unit connection strengths, called weights. Input strength depends on the
 weight value. Weight value can be positive, negative or zero. Negative weight means that the signal is reduced or
 inhibited. Zero weight means that there is no connection between the two neurons. The weights are adjusted to
@@ -40,7 +43,8 @@ process of adjusting weights is called learning or training.[1]
 Adam Optimizer
 
 Adam is an optimization algorithm that can be used instead of the classical stochastic gradient descent procedure to update network weights iterative based in training data. Adam is different to classical stochastic gradient descent. Stochastic gradient descent maintains a single learning rate (termed alpha) for all weight updates and the learning rate does not change during training. A learning rate is maintained for each network weight (parameter) and separately adapted as learning unfolds.[2]
-![](images/AdamO)
+
+![](images/AdamO.png)
 
 Stochastic Gradient Descent
 
